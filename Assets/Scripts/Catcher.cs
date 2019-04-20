@@ -7,7 +7,7 @@ public class Catcher : MonoBehaviour
     //How many times can you go left and right
     int step_counter = 0; 
     // Start is called before the first frame update
-    //lol
+    
     void Start()
     {
         
