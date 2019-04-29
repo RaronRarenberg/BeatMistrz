@@ -13,6 +13,6 @@ public class Block : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0f,-0.1f,0f);
+        transform.Translate(0f,-13f * Time.deltaTime,0f);
     }
 }
