@@ -13,10 +13,30 @@ public class DoubleTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (Time.timeScale == 1.0f)
                 Time.timeScale = 2.0f;
+            else
+                Time.timeScale = 1.0f;
+            // Adjust fixed delta time according to timescale
+            // The fixed delta time will now be 0.02 frames per real-time second
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (Time.timeScale == 1.0f)
+                Time.timeScale = 3.0f;
+            else
+                Time.timeScale = 1.0f;
+            // Adjust fixed delta time according to timescale
+            // The fixed delta time will now be 0.02 frames per real-time second
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (Time.timeScale == 1.0f)
+                Time.timeScale = 4.0f;
             else
                 Time.timeScale = 1.0f;
             // Adjust fixed delta time according to timescale
