@@ -16,7 +16,7 @@ public class DoubleTime : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Time.timeScale == 1.0f)
-                Time.timeScale = 0.7f;
+                Time.timeScale = 2.0f;
             else
                 Time.timeScale = 1.0f;
             // Adjust fixed delta time according to timescale
