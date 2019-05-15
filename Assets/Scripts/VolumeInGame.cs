@@ -18,14 +18,14 @@ public class VolumeInGame : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
-                AudioListener.volume += 0.1f;
+                AudioListener.volume += 0.5f;
             }
         }
         if (AudioListener.volume != 0.0f)
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                AudioListener.volume -= 0.1f;
+                AudioListener.volume -= 0.5f;
             }
         }
     }

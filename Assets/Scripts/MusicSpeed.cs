@@ -18,7 +18,7 @@ public class MusicSpeed : MonoBehaviour
         {
             if (music.pitch == 1.0f)
             {
-                music.pitch = 2.0f;
+                music.pitch = 5.0f;
             }
             else
                 music.pitch = 1.0f;
@@ -27,7 +27,7 @@ public class MusicSpeed : MonoBehaviour
         {
             if (music.pitch == 1.0f)
             {
-                music.pitch = 3.0f;
+                music.pitch = 8.0f;
             }
             else
                 music.pitch = 1.0f;
@@ -36,7 +36,7 @@ public class MusicSpeed : MonoBehaviour
         {
             if (music.pitch == 1.0f)
             {
-                music.pitch = 4.0f;
+                music.pitch = 10.0f;
             }
             else
                 music.pitch = 1.0f;
