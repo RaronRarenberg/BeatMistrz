@@ -18,7 +18,7 @@ public class MusicSpeed : MonoBehaviour
         {
             if (music.pitch == 1.0f)
             {
-                music.pitch = 5.0f;
+                music.pitch = 0.5f;
             }
             else
                 music.pitch = 1.0f;
