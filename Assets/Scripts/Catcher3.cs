@@ -21,10 +21,12 @@ public class Catcher3 : MonoBehaviour
         if (Input.GetKeyDown("j"))
         {
             gameObject.GetComponent<Renderer>().enabled = true;
-            gameObject.collider.enabled = true;
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
         else
+        { 
             gameObject.GetComponent<Renderer>().enabled = false;
-            gameObject.collider.enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
 }
