@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Catcher : MonoBehaviour
+public class Catcher2 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +18,7 @@ public class Catcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKeyDown("f"))
         {
             gameObject.GetComponent<Renderer>().enabled = true;
             gameObject.collider.enabled = true;
