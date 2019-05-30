@@ -20,13 +20,16 @@ public class Catcher4 : MonoBehaviour
     {
         if (Input.GetKeyDown("k"))
         {
-            gameObject.GetComponent<Renderer>().enabled = true;
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            StartCoroutine(ShowAndHide(0.1f));
         }
-        else
-        { 
-            gameObject.GetComponent<Renderer>().enabled = false;
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
+
+    }
+    IEnumerator ShowAndHide(float time)
+    {
+        gameObject.GetComponent<Renderer>().enabled = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        yield return new WaitForSeconds(time);
+        gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
