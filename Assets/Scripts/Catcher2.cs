@@ -7,7 +7,8 @@ public class Catcher2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,6 +23,7 @@ public class Catcher2 : MonoBehaviour
         {
             StartCoroutine(ShowAndHide(0.1f));
         }
+        
 
     }
     IEnumerator ShowAndHide(float time)

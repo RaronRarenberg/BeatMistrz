@@ -7,7 +7,8 @@ public class Catcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
