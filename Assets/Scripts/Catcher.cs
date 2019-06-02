@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class Catcher : MonoBehaviour
 {
+    public GameObject farleft;
+    public GameObject midleft;
+    public GameObject midright;
+    public GameObject farright;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Renderer>().enabled = false;
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        farleft = GameObject.Find("player");
+        farleft.GetComponent<Renderer>().enabled = false;
+        farleft.GetComponent<BoxCollider2D>().enabled = false;
+
+        midleft = GameObject.Find("player2");
+        midleft.GetComponent<Renderer>().enabled = false;
+        midleft.GetComponent<BoxCollider2D>().enabled = false;
+
+        midright = GameObject.Find("player3");
+        midright.GetComponent<Renderer>().enabled = false;
+        midright.GetComponent<BoxCollider2D>().enabled = false;
+
+        farright = GameObject.Find("player4");
+        farright.GetComponent<Renderer>().enabled = false;
+        farright.GetComponent<BoxCollider2D>().enabled = false;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,18 +36,30 @@ public class Catcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("d"))
+        if (Input.GetButtonDown("HIT1"))
         {
-            StartCoroutine(ShowAndHide(0.1f));
+            StartCoroutine(ShowAndHide(0.1f,farleft));
         }
-        
+        else if (Input.GetButtonDown("HIT2"))
+        {
+            StartCoroutine(ShowAndHide(0.1f, midleft));
+        }
+        else if (Input.GetButtonDown("HIT3"))
+        {
+            StartCoroutine(ShowAndHide(0.1f, midright));
+        }
+        else if (Input.GetButtonDown("HIT4"))
+        {
+            StartCoroutine(ShowAndHide(0.1f, farright));
+        }
+
     }
-    IEnumerator ShowAndHide(float time)
+    IEnumerator ShowAndHide(float time,GameObject who)
     {
-        gameObject.GetComponent<Renderer>().enabled = true;
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        who.GetComponent<Renderer>().enabled = true;
+        who.GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(time);
-        gameObject.GetComponent<Renderer>().enabled = false;
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        who.GetComponent<Renderer>().enabled = false;
+        who.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
