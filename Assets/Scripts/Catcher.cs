@@ -40,15 +40,15 @@ public class Catcher : MonoBehaviour
         {
             StartCoroutine(ShowAndHide(0.1f,farleft));
         }
-        else if (Input.GetButtonDown("HIT2"))
+         if (Input.GetButtonDown("HIT2"))
         {
             StartCoroutine(ShowAndHide(0.1f, midleft));
         }
-        else if (Input.GetButtonDown("HIT3"))
+        if (Input.GetButtonDown("HIT3"))
         {
             StartCoroutine(ShowAndHide(0.1f, midright));
         }
-        else if (Input.GetButtonDown("HIT4"))
+        if (Input.GetButtonDown("HIT4"))
         {
             StartCoroutine(ShowAndHide(0.1f, farright));
         }
