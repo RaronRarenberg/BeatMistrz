@@ -7,11 +7,13 @@ public class Block : MonoBehaviour
 {
     Points scoore;
     Combo coombo;
+    Health hp;
     // Start is called before the first frame update
     void Start()
     {
         scoore = GameObject.Find("points").GetComponent<Points>();
         coombo = GameObject.Find("points").GetComponent<Combo>();
+        hp = GameObject.Find("Health").GetComponent<Health>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,10 +21,15 @@ public class Block : MonoBehaviour
         {
             scoore.number = scoore.number + 1;
             coombo.number = coombo.number + 1;
+            if (hp.GetHealth() < 1f)
+            {
+                hp.AddHealth(0.1f);
+            }
         }
         else if (other.name == "combo-reset-trigger")
         {
             coombo.number = 0;
+            hp.SubtractHealth(0.1f);
         }
     }
         // Update is called once per frame

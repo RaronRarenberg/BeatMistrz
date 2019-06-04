@@ -19,9 +19,27 @@ public class Health : MonoBehaviour
     void Update()
     {
         StartCoroutine(HealthDrain(0.1f));
-
-
     }
+    public float GetHealth()
+    {
+        return health;
+    }
+    public void AddHealth(float amount)
+    {
+        if (health + amount > 1f)
+        {
+            health = 1f;
+        }
+        else
+        {
+            health = health + amount;
+        }
+    }
+    public void SubtractHealth(float amount)
+    {
+        health = health - amount;
+    }
+
     IEnumerator HealthDrain(float time)
     {
         if (health > 0f)
