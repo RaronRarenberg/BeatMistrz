@@ -18,9 +18,11 @@ public class END : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("tak");
         if (other.name == "combo-reset-trigger")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            Debug.Log("bardzo tak");
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class Points : MonoBehaviour
 {
-    public Text score;
+    public TextMeshProUGUI score;
     public int number;
-    public Text highscore;
+    public TextMeshProUGUI highscore;
     // Start is called before the first frame update
     void Start()
     {

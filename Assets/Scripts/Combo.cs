@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Combo : MonoBehaviour
 {
-    public Text combo;
+    public TextMeshProUGUI combo;
     public int number;
-    public Text bestcombo;
+    public TextMeshProUGUI bestcombo;
     // Start is called before the first frame update
     void Start()
     {

@@ -18,8 +18,9 @@ public class MusicSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        music.volume = PlayerPrefs.GetFloat("MasterVolume", 1);
         //Speed Control Section DEBUG
-        if (Input.GetKeyDown(KeyCode.B))
+        /*if (Input.GetKeyDown(KeyCode.B))
         {
             if (music.pitch == 1.0f)
             {
@@ -45,7 +46,7 @@ public class MusicSpeed : MonoBehaviour
             }
             else
                 music.pitch = 1.0f;
-        }
+        }*/
         //End ofSpeed Control Section DEBUG
         if (PauseMenu.isPaused)
         {
