@@ -44,9 +44,12 @@ public class Health : MonoBehaviour
     {
         if (health > 0f)
         {
-            yield return new WaitForSeconds(time);
-            health -= 0.001f;
-            healthBar.SetSize(health);
+            if (!PauseMenu.isPaused)
+            {
+                yield return new WaitForSeconds(time);
+                health -= 0.09f * Time.deltaTime;
+                healthBar.SetSize(health);
+            }
         }
         else
         {

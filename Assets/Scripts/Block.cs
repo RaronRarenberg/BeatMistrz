@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Block : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Block : MonoBehaviour
             coombo.number = 0;
             hp.SubtractHealth(0.1f);
         }
+        
     }
         // Update is called once per frame
         void Update()

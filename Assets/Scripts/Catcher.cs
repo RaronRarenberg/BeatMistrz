@@ -29,7 +29,7 @@ public class Catcher : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("HIT");
+        //Debug.Log("HIT");
         Destroy(other.gameObject);
     }
 

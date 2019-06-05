@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class MusicSpeed : MonoBehaviour
 {
     AudioSource music;
+    PauseMenu pausemenu;
     // Start is called before the first frame update
     void Start()
     {
         music = GetComponent<AudioSource>();
         music.Play();
+        pausemenu = GameObject.Find("Canvas").GetComponent<PauseMenu>();
     }
 
     // Update is called once per frame
@@ -45,9 +47,14 @@ public class MusicSpeed : MonoBehaviour
                 music.pitch = 1.0f;
         }
         //End ofSpeed Control Section DEBUG
-        if (!music.isPlaying)
+        if (PauseMenu.isPaused)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            music.Pause();
+            Debug.Log("WAZAAAAAAA");
+        }
+        else
+        {
+            music.UnPause();
         }
     }   
 }
