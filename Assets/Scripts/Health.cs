@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(HealthDrain(0.1f));
+       // StartCoroutine(HealthDrain(0.1f));
     }
     public float GetHealth()
     {
